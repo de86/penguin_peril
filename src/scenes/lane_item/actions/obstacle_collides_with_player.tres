@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="OnCollideWithPlayer" load_steps=3 format=3 uid="uid://cpsyyhjffos42"]
+
+[ext_resource type="Script" path="res://src/scenes/lane_item/resource_defs/rdef_action_on_player_collision.gd" id="1_p2edi"]
+[ext_resource type="AudioStream" uid="uid://cfxqu1beyigny" path="res://src/assets/audio/sfx/lane_item/obstacle_collides_with_player.wav" id="2_sggni"]
+
+[resource]
+script = ExtResource("1_p2edi")
+sfx_player_collision = ExtResource("2_sggni")

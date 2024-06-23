@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://sv6kacqvrxll"]
+
+[ext_resource type="Script" path="res://src/scenes/ui/ui_controller.gd" id="1_03lmo"]
+[ext_resource type="PackedScene" uid="uid://cubvlww6blhs3" path="res://src/scenes/ui/score/score.tscn" id="1_ijvy0"]
+[ext_resource type="PackedScene" uid="uid://bd2bxy2dv4xoc" path="res://src/scenes/ui/restart/restart.tscn" id="2_wamp4"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_03lmo")
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Score" parent="HUD" instance=ExtResource("1_ijvy0")]
+layout_mode = 1
+
+[node name="Restart" parent="." instance=ExtResource("2_wamp4")]
+visible = false
+layout_mode = 1

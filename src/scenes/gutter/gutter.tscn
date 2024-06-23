@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://guikl03kpdp8"]
+
+[ext_resource type="Script" path="res://src/scenes/gutter_controller.gd" id="1_o7n3w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d7iob"]
+size = Vector3(10, 5, 1)
+
+[node name="Gutter" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+script = ExtResource("1_o7n3w")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 10
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_d7iob")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

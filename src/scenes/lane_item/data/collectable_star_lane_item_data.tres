@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="LaneItemData" load_steps=4 format=3 uid="uid://dj1j1lpx1a0tn"]
+
+[ext_resource type="Script" path="res://src/scenes/lane_item/resource_defs/lane_item_data.gd" id="1_kteoc"]
+[ext_resource type="Resource" uid="uid://7dba5x0h8vmm" path="res://src/scenes/lane_item/actions/collectable_collides_with_player_action.tres" id="1_up6ga"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_71pru"]
+
+[resource]
+script = ExtResource("1_kteoc")
+speed = 5.0
+mesh = SubResource("SphereMesh_71pru")
+on_collide_with_player_behaviour = ExtResource("1_up6ga")
+is_collectible = true
+score = 50

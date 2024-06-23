@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://s61wjugu8o1l"]
+
+[ext_resource type="Script" path="res://src/scripts/broadcast_camera.gd" id="1_lelo4"]
+
+[node name="Camera3D" type="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999201, 0.0399574, 0, -0.0399574, 0.999201, 0, 2.424, 40)
+fov = 5.0
+script = ExtResource("1_lelo4")
