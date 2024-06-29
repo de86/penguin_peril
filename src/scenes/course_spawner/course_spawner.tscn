@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://vrkoo1kjw32j"]
+[gd_scene load_steps=6 format=3 uid="uid://vrkoo1kjw32j"]
 
 [ext_resource type="Script" path="res://src/scenes/course_spawner/course_spawner.gd" id="1_r4bbu"]
 [ext_resource type="PackedScene" uid="uid://ccpvs5buv5s5b" path="res://src/scenes/lane_item/lane_item.tscn" id="2_cednl"]
 [ext_resource type="PackedScene" uid="uid://dsgxdyel8yp2c" path="res://src/scenes/tree_scenery/tree_scenery.tscn" id="3_gd880"]
-[ext_resource type="Resource" uid="uid://dj1j1lpx1a0tn" path="res://src/scenes/lane_item/data/collectable_star_lane_item_data.tres" id="4_0ot55"]
-[ext_resource type="Resource" uid="uid://d3yjhp6y10kt" path="res://src/scenes/lane_item/data/obstacle_rock_lane_item_data.tres" id="5_qx3e0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8dot"]
 albedo_color = Color(0.894118, 0.101961, 1, 1)
@@ -16,8 +14,6 @@ material = SubResource("StandardMaterial3D_p8dot")
 script = ExtResource("1_r4bbu")
 _lane_item_scene = ExtResource("2_cednl")
 _tree_scene = ExtResource("3_gd880")
-_collectable_star_lane_item_data = ExtResource("4_0ot55")
-_obstacle_rock_lane_item_data = ExtResource("5_qx3e0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 visible = false
@@ -57,3 +53,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 0)
 [node name="SceneryLaneRight" type="Marker3D" parent="SpawnLanes"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0)
+
+[node name="SceneryItems" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="LaneItems" type="Node3D" parent="."]
+unique_name_in_owner = true

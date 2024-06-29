@@ -1,10 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlg4unh2xsxf3"]
+[gd_scene load_steps=14 format=3 uid="uid://dlg4unh2xsxf3"]
 
 [ext_resource type="Script" path="res://src/scenes/world.gd" id="1_44ts0"]
 [ext_resource type="Script" path="res://src/scripts/broadcast_camera.gd" id="1_jy0rp"]
+[ext_resource type="Resource" uid="uid://b51cok7ddmivv" path="res://src/scenes/lane_item/data/obstacle_seal_lane_item_data.tres" id="3_grvk1"]
+[ext_resource type="Resource" uid="uid://dj1j1lpx1a0tn" path="res://src/scenes/lane_item/data/collectable_star_lane_item_data.tres" id="3_w15a3"]
+[ext_resource type="Resource" uid="uid://d3yjhp6y10kt" path="res://src/scenes/lane_item/data/obstacle_rock_lane_item_data.tres" id="4_msp55"]
 [ext_resource type="PackedScene" uid="uid://vrkoo1kjw32j" path="res://src/scenes/course_spawner/course_spawner.tscn" id="4_ph5sa"]
 [ext_resource type="PackedScene" uid="uid://guikl03kpdp8" path="res://src/scenes/gutter/gutter.tscn" id="5_uq3jh"]
 [ext_resource type="PackedScene" uid="uid://c2vt0koyqrcjm" path="res://src/scenes/player/player.tscn" id="5_xerma"]
+[ext_resource type="Resource" uid="uid://73x5sqjdqxn7" path="res://src/scenes/lane_item/data/obstacle_ice_hole_lane_item_data.tres" id="6_qwme5"]
 
 [sub_resource type="Environment" id="Environment_o88eo"]
 background_mode = 1
@@ -35,7 +39,9 @@ camera_attributes = SubResource("CameraAttributesPractical_bk46l")
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 64, -86)
 
 [node name="CourseSpawner" parent="." instance=ExtResource("4_ph5sa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -30.4216)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30)
+_collectable_lane_items = Array[Resource("res://src/scenes/lane_item/resource_defs/lane_item_data.gd")]([ExtResource("3_w15a3")])
+_obstacle_lane_items = Array[Resource("res://src/scenes/lane_item/resource_defs/lane_item_data.gd")]([ExtResource("4_msp55"), ExtResource("3_grvk1"), ExtResource("6_qwme5")])
 
 [node name="Ground" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -300)
@@ -53,4 +59,3 @@ script = ExtResource("1_jy0rp")
 
 [node name="Player" parent="." instance=ExtResource("5_xerma")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-_move_speed = 3

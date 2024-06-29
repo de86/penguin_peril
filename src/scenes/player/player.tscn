@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://c2vt0koyqrcjm"]
+[gd_scene load_steps=10 format=3 uid="uid://c2vt0koyqrcjm"]
 
 [ext_resource type="Script" path="res://src/scenes/player/player_controller.gd" id="1_ytv44"]
+[ext_resource type="AudioStream" uid="uid://bqsr2itjf748j" path="res://src/assets/audio/sfx/player/player_jump.wav" id="2_wqn4h"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hj7hh"]
 albedo_color = Color(0, 0.196, 0.56, 1)
@@ -126,6 +127,7 @@ _data = {
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_ytv44")
+_sfx_player_jump = ExtResource("2_wqn4h")
 
 [node name="ModelMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.0555576, -0.998455, 0, 0.998455, 0.0555576, 0, 0.187021, 0)

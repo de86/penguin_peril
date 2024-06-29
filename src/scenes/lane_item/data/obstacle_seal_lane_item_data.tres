@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="LaneItemData" load_steps=5 format=3 uid="uid://b51cok7ddmivv"]
+
+[ext_resource type="Resource" uid="uid://cpsyyhjffos42" path="res://src/scenes/lane_item/actions/obstacle_collides_with_player.tres" id="1_pp1ev"]
+[ext_resource type="Script" path="res://src/scenes/lane_item/resource_defs/lane_item_data.gd" id="2_w31j5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d4w7i"]
+albedo_color = Color(0.760784, 0.4, 0.0627451, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_78k2p"]
+material = SubResource("StandardMaterial3D_d4w7i")
+radius = 0.25
+height = 1.0
+
+[resource]
+script = ExtResource("2_w31j5")
+speed = 5.0
+mesh = SubResource("CapsuleMesh_78k2p")
+on_collide_with_player_behaviour = ExtResource("1_pp1ev")
+is_collectible = false
+score = 0

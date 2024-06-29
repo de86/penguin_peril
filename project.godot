@@ -24,6 +24,7 @@ InputHandler="*res://src/autoloads/input_handler.gd"
 ScoreManager="*res://src/autoloads/score_manager.gd"
 SFXManager="*res://src/autoloads/sfx_manager.gd"
 MusicManager="*res://src/autoloads/music_manager.gd"
+Utils="*res://src/autoloads/utils.gd"
 
 [display]
 

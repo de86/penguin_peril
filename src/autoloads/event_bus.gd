@@ -25,8 +25,10 @@ signal score_changed (new_score: int);
 # Game
 signal player_died;
 signal game_restarted;
+signal game_paused;
+signal game_unpaused;
 
 
 # Audio
 signal play_sfx_requested(sfx: AudioStream);
-signal play_bgm_requested(bgm_track_name: )
+signal play_bgm_requested(bgm_track_name: String)

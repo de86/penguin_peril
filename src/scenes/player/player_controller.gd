@@ -6,9 +6,9 @@ class_name Player
 @export var _acceleration  := 0.01;
 @export var _deceleration  := 0.05;
 @export var _max_speed := 3.0;
+@export var _sfx_player_jump: AudioStream;
 
 @onready var _animations = %AnimationPlayer as AnimationPlayer;
-@onready var _sfx_player_jump = preload("res://src/assets/audio/sfx/player/player_jump.wav");
 
 var _target_x_position: float;
 var _is_alive := true;
@@ -20,9 +20,19 @@ var _x_movement_dead_zone := 0.025;
 
 func _ready ():
 	_start_position = Vector3(0, 0, -2);
-	EventBus.player_attempted_move_to.connect(_on_player_attempted_move_to)
-	EventBus.player_attempted_jump.connect(_on_player_attempted_jump)
-	EventBus.game_restarted.connect(_on_game_restarted)
+	EventBus.player_attempted_move_to.connect(_on_player_attempted_move_to);
+	EventBus.player_attempted_jump.connect(_on_player_attempted_jump);
+	EventBus.game_restarted.connect(_on_game_restarted);
+	EventBus.game_paused.connect(_on_game_paused);
+	EventBus.game_unpaused.connect(_on_game_unpaused);
+
+
+func _on_game_paused ():
+	Utils.pause_branch(self);
+
+
+func _on_game_unpaused ():
+	Utils.unpause_branch(self);
 
 
 func _physics_process (delta):

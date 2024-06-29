@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="LaneItemData" load_steps=5 format=3 uid="uid://73x5sqjdqxn7"]
+
+[ext_resource type="Resource" uid="uid://cpsyyhjffos42" path="res://src/scenes/lane_item/actions/obstacle_collides_with_player.tres" id="1_ef4jn"]
+[ext_resource type="Script" path="res://src/scenes/lane_item/resource_defs/lane_item_data.gd" id="1_mh8ur"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jxvxf"]
+albedo_color = Color(0.109804, 0.52549, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0g2hq"]
+material = SubResource("StandardMaterial3D_jxvxf")
+size = Vector3(0.5, 0.1, 0.5)
+
+[resource]
+script = ExtResource("1_mh8ur")
+speed = 5.0
+mesh = SubResource("BoxMesh_0g2hq")
+on_collide_with_player_behaviour = ExtResource("1_ef4jn")
+is_collectible = false
+score = 0
