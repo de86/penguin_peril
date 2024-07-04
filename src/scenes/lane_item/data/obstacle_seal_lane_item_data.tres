@@ -18,3 +18,4 @@ mesh = SubResource("CapsuleMesh_78k2p")
 on_collide_with_player_behaviour = ExtResource("1_pp1ev")
 is_collectible = false
 score = 0
+collision_size = 2

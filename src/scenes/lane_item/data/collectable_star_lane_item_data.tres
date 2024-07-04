@@ -12,3 +12,4 @@ mesh = SubResource("SphereMesh_71pru")
 on_collide_with_player_behaviour = ExtResource("1_up6ga")
 is_collectible = true
 score = 50
+collision_size = 2

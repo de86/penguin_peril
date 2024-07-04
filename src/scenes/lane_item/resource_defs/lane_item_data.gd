@@ -6,3 +6,4 @@ class_name LaneItemData
 @export var on_collide_with_player_behaviour: ActionResource;
 @export var is_collectible: bool;
 @export var score: int;
+@export var collision_size: Constants.OBSTACLE_SIZE;

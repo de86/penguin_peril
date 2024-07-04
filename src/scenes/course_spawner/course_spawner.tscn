@@ -14,6 +14,9 @@ material = SubResource("StandardMaterial3D_p8dot")
 script = ExtResource("1_r4bbu")
 _lane_item_scene = ExtResource("2_cednl")
 _tree_scene = ExtResource("3_gd880")
+_starting_spawn_interval = 1.0
+_min_spawn_interval = 0.5
+_spawn_interval_reduction = 0.01
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 visible = false
@@ -28,7 +31,7 @@ autostart = true
 
 [node name="SpawnTimer" type="Timer" parent="Timers"]
 unique_name_in_owner = true
-autostart = true
+one_shot = true
 
 [node name="SpawnLanes" type="Node3D" parent="."]
 
