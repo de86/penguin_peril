@@ -26,7 +26,7 @@ mesh = SubResource("SphereMesh_1skcj")
 
 [node name="ScenerySpawnTimer" type="Timer" parent="Timers"]
 unique_name_in_owner = true
-wait_time = 0.2
+wait_time = 0.4
 autostart = true
 
 [node name="SpawnTimer" type="Timer" parent="Timers"]
@@ -51,11 +51,11 @@ gizmo_extents = 1.0
 
 [node name="SceneryLaneLeft" type="Marker3D" parent="SpawnLanes"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 
 [node name="SceneryLaneRight" type="Marker3D" parent="SpawnLanes"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 
 [node name="SceneryItems" type="Node3D" parent="."]
 unique_name_in_owner = true

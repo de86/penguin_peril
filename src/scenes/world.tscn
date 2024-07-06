@@ -23,6 +23,7 @@ dof_blur_far_transition = 48.0
 dof_blur_amount = 0.01
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ucy7"]
+albedo_color = Color(0.580392, 0.682353, 0.705882, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_ksh6k"]
 material = SubResource("StandardMaterial3D_3ucy7")

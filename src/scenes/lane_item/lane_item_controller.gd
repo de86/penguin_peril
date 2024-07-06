@@ -17,7 +17,7 @@ var _lane_item_data: LaneItemData;
 
 
 func _ready ():
-	_mesh_instance.mesh = _lane_item_data.mesh;
+	_set_up_visual();
 	_set_collision_size(_lane_item_data.collision_size);
 	
 	EventBus.lane_item_hit_gutter.connect(_on_collide_with_gutter);
@@ -29,6 +29,16 @@ func with_data (lane_item_data) -> LaneItem:
 	_lane_item_data = lane_item_data;
 	
 	return self;
+
+
+func _set_up_visual():
+	if _lane_item_data.visual_scene:
+		var visual = _lane_item_data.visual_scene.instantiate();
+		add_child(visual);
+		_mesh_instance.mesh = null;
+	else:
+		_mesh_instance.mesh = _lane_item_data.mesh;
+		
 
 
 func _set_collision_size (size: Constants.OBSTACLE_SIZE):

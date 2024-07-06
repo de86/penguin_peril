@@ -25,7 +25,7 @@ extends Node3D
 @onready var _scenery_items_collection = %SceneryItems;
 @onready var _lane_items_collection = %LaneItems;
 
-var _scenery_spawn_offset_range := 0.3;
+var _scenery_spawn_offset_range := 1;
 var _spawn_count := 0;
 var _current_spawn_interval_reduction := 0.0;
 
